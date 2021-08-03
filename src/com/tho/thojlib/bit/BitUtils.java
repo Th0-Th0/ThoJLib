@@ -3,9 +3,6 @@ package com.tho.thojlib.bit;
 import com.tho.thojlib.math.MathUtils;
 
 public class BitUtils {
-	public static final int BOOLEAN_FALSE = 0;
-	public static final int BOOLEAN_TRUE = 1;
-	public static final int BOOLEAN_BIT_SIZE = 1;
 	public static final int BITS_PER_BYTE = 8;
 
 	private BitUtils() {

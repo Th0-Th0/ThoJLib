@@ -1,0 +1,27 @@
+<project name="ThoJLib" default="create-jars" basedir=".">
+	<property name="app.name" value="ThoJLib" />
+	<property name="src.dir" location="src" />
+	<property name="bin.dir" location="bin" />
+	<property name="output.jars.dir" location="output_jars" />
+
+	<target name="clean" description="delete generated directories">
+		<delete dir="${bin.dir}" />
+		<delete dir="${output.jars.dir}" />
+	</target>
+	
+	<target name="init" depends="clean" description="create directories for classes and jars generation">
+		<mkdir dir="${bin.dir}" />
+		<mkdir dir="${output.jars.dir}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the sources">
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${bin.dir}" />
+	</target>
+
+	<target name="create-jars" depends="compile" description="generate the jars">
+		<jar destfile="${output.jars.dir}/${app.name}.jar">
+	    <fileset dir="${bin.dir}" includes="**/*.class"/>
+	    <fileset dir="${src.dir}" includes="**/*.java"/>
+		</jar>
+	</target>
+</project>
