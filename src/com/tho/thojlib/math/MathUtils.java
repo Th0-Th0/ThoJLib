@@ -43,4 +43,4 @@ public class MathUtils {
 		final int sqrt = (int) Math.sqrt(value);
 		return sqrt * sqrt == value;
 	}
-}
+} 

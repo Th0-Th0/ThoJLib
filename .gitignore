@@ -2,3 +2,5 @@
 *.log
 hs_err_pid*
 *.replit
+/bin/
+/eclipse_bin/

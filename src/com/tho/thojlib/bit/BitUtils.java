@@ -13,7 +13,6 @@ public class BitUtils {
 	 * Generate a bit mask (start to end bit). Max 64 bits.
 	 */
 	public static long generateBitmaskInRange(final int startBit, final int endBit) {
-
 		// Check arguments
 		if (startBit >= Long.SIZE || startBit < 0 || endBit >= Long.SIZE || endBit < 0) {
 			throw new IllegalArgumentException("Can't generate bitmask from bit " + startBit + " to bit " + endBit);
