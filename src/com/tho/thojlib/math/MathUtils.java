@@ -18,11 +18,22 @@ public class MathUtils {
 	}
 
 	/**
-	 * Optimized modulo for power of 2.
-	 * Warning : the arg mod must be a power of 2.
+	 * When used with (a < 0), it returns a positive result, contrary to Java a%b,
+	 * which is a remainder.
+	 */
+	public static double mod(final double a, final double b) {
+		double res = a % b;
+		if (a < 0) {
+			res += b > 0 ? b : -b;
+		}
+		return res;
+	}
+
+	/**
+	 * Optimized modulo for power of 2. Warning : the arg mod must be a power of 2.
 	 */
 	public static int modPowerOfTwo(final int value, final int mod) {
-		return value & (mod - 1);
+		return value & mod - 1;
 	}
 
 	/**
@@ -43,4 +54,4 @@ public class MathUtils {
 		final int sqrt = (int) Math.sqrt(value);
 		return sqrt * sqrt == value;
 	}
-} 
+}
