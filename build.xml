@@ -1,5 +1,5 @@
 <project name="ThoJLib" default="create-jars" basedir=".">
-	<property name="app.name" value="ThoJLib" />
+	<property name="app.name" value="thojlib" />
 	<property name="src.dir" location="src" />
 	<property name="bin.dir" location="bin" />
 	<property name="output.jars.dir" location="output_jars" />
@@ -20,8 +20,10 @@
 
 	<target name="create-jars" depends="compile" description="generate the jars">
 		<jar destfile="${output.jars.dir}/${app.name}.jar">
-	    <fileset dir="${bin.dir}" includes="**/*.class"/>
-	    <fileset dir="${src.dir}" includes="**/*.java"/>
+			<fileset dir="${bin.dir}" includes="**/*.class"/>
+		</jar>
+		<jar destfile="${output.jars.dir}/${app.name}-src.jar">
+			<fileset dir="${src.dir}" includes="**/*.java"/>
 		</jar>
 	</target>
 </project>

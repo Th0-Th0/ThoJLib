@@ -30,5 +30,15 @@
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/tests</locationURI>
 		</link>
+		<link>
+			<name>output_jars/thojlib-src.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/output_jars/thojlib-src.jar</locationURI>
+		</link>
+		<link>
+			<name>output_jars/thojlib.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/output_jars/thojlib.jar</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>
